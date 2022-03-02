@@ -1,0 +1,15 @@
+.text-field{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+};
+.input-field{
+    border: 1px solid rgb(126, 118, 118);
+    border-radius: 3px;
+};
+.columns{
+    display: flex;
+};
+#body-columns{
+    background-color: grey;
+};
