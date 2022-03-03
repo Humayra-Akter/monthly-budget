@@ -13,3 +13,6 @@
 #body-columns{
     background-color: grey;
 };
+.notify-section{
+    display: none;
+};

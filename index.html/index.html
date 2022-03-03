@@ -12,6 +12,7 @@
 
 <body>
     <!-- input section -->
+
     <h1 class="text-5xl text-center font-bold mt-8 mb-8 text-green-600">Monthly-budget</h1>
     <section>
         <div class="grid gap-6 grid-cols-2 mx-2 my-2 mt-8 bg-green-50">
@@ -25,7 +26,7 @@
                         <div>
                             <h1 class="text-1xl font-normal ml-60">Income :</h1>
                         </div>
-                        <div class="input-field">
+                        <div class="income-input-field">
                             <input id="income-input"
                                 class="border-2 block w-3/4 border-green-200 rounded mb-4 px-4 ml-4" type="text"
                                 placeholder="Income amount">
@@ -86,7 +87,7 @@
                 <div class="flex mt-4 mb-2 ml-56">
                     <h1 class="text-2xl font-semibold">Balance : </h1>
                     <div class="input-field">
-                        <input id="income-input" class="border-2 block w-3/4 border-green-200 rounded mb-4 px-2 ml-3"
+                        <input id="balance-field" class="border-2 block w-3/4 border-green-200 rounded mb-4 px-2 ml-3"
                             type="text">
                     </div>
                 </div>
@@ -109,6 +110,9 @@
 
             </div>
 
+        </div>
+        <div class="notify-section">
+            <p id="notify-fail" class="notify">Please enter a value</p>
         </div>
     </section>
     <script src="js/budget-calculator.js"></script>
