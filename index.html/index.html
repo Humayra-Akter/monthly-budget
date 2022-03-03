@@ -12,7 +12,7 @@
 
 <body>
     <h1 class="text-5xl text-center font-bold mt-8 mb-8 text-green-600">Monthly-budget</h1>
-    <div class="grid gap-4 grid-cols-2 mx-2 my-2 mt-8 bg-green-50">
+    <div class="grid gap-6 grid-cols-2 mx-2 my-2 mt-8 bg-green-50">
         <div>
             <img src="kelly-sikkema-xoU52jUVUXA-unsplash.jpg" alt="">
         </div>
@@ -62,14 +62,34 @@
             <div>
                 <button class="bg-green-600 ml-80 pt-2 pb-2 pl-4 pr-4 mt-8 text-green-50 rounded">Calculate</button>
             </div>
-            <div class="field">
-                <div class="text-field">
+
+            <!-- calculation section  -->
+
+            <div class="flex mt-4 mb-2 ml-48">
+                <h1 class="text-2xl font-semibold">Total Expense : </h1>
+                <div class="input-field">
+                    <input class="ml-2" type="text">
+                </div>
+            </div>
+            <div class="flex mt-4 mb-2 ml-56">
+                <h1 class="text-2xl font-semibold">Balance : </h1>
+                <div class="input-field">
+                    <input class="ml-2" type="text">
+                </div>
+            </div>
+
+            <!-- save button section -->
+
+            <div class="grid grid-cols-4 gap-2 mt-12">
+                <div class="flex">
                     <div>
-                        <h1 class="text-1xl font-normal ml-44">Save :</h1>
+                        <p class="text-1xl font-normal ml-44">Save:</p>
                     </div>
-                    <div class="input-field">
+                    <div>
                         <input class="ml-3" type="text" placeholder="percentage">
-                        <button class="bg-green-600 pt-2 pb-2 pl-4 pr-4 mt-8 text-green-50 rounded">Save</button>
+                    </div>
+                    <div>
+                        <button class="bg-green-600 pt-2 pb-2 pl-4 pr-4 text-green-50 rounded">Save</button>
                     </div>
                 </div>
             </div>
