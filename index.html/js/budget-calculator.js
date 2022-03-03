@@ -17,13 +17,6 @@ function totalCost(productExpense) {
     sum = sum + productExpense;
     return sum;
 };
-function finalBalance(incomeInput) {
-    totalCost();
-    const balance = incomeInput - sum;
-    return balance;
-}
-//calling input function
-
 document.getElementById('calculate-btn').addEventListener('click', function () {
     updateExpense('food');
 });
@@ -33,21 +26,20 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 document.getElementById('calculate-btn').addEventListener('click', function () {
     updateExpense('clothes');
 });
-document.getElementById('calculate-btn').addEventListener('click', function () {
 
-});
 document.getElementById('calculate-btn').addEventListener('click', function () {
     // calculating total expense
     const totalExpense = document.getElementById('total-expense');
     totalExpense.value = sum;
 });
+//calculating balance
 document.getElementById('calculate-btn').addEventListener('click', function () {
-    const incomeInputField = document.getElementById('income-input-field');
+    const incomeInputField = document.getElementById('income-input');
     const incomeInputText = incomeInputField.value;
-    const incomeInput = parseInt(incomeInputText);
+    let incomeInput = parseInt(incomeInputText);
     if (incomeInput > 0) {
-        finalBalance(incomeInput);
+        let balance = incomeInput - sum;
         const balanceField = document.getElementById('balance-field');
         balanceField.value = balance;
     }
-});
+}); 
