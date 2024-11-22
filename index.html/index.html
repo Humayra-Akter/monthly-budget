@@ -10,112 +10,82 @@
     <title>Monthly-budget</title>
 </head>
 
-<body>
-    <!-- input section -->
+<body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-green-600 text-white py-6 text-center">
+        <h1 class="text-4xl font-bold">Monthly Budget Calculator</h1>
+        <p class="text-lg mt-2">Plan your expenses and save smartly!</p>
+    </header>
 
-    <h1 class="text-5xl text-center font-bold mt-8 mb-8 text-green-600">Monthly-budget</h1>
-    <section>
-        <div class="grid gap-6 grid-cols-2 mx-2 my-2 mt-8 bg-green-50">
-            <div>
-                <img src="kelly-sikkema-xoU52jUVUXA-unsplash.jpg" alt="">
+    <!-- Main Content Section -->
+    <main class="container mx-auto p-8 bg-white shadow-lg rounded-lg mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Image Section -->
+            <div class="flex justify-center">
+                <img src="kelly-sikkema-xoU52jUVUXA-unsplash.jpg" alt="Budget Planning"
+                    class="rounded-lg shadow-lg max-w-full h-auto">
             </div>
+
+            <!-- Input and Calculation Section -->
             <div>
-                <div class="field">
-                    <h1 class="text-3xl text-center font-medium mt-4 mb-4 text-green-600">Income</h1>
-                    <div class="text-field">
-                        <div>
-                            <h1 class="text-1xl font-normal ml-60">Income :</h1>
-                        </div>
-                        <div class="income-input-field">
-                            <input id="income-input"
-                                class="border-2 block w-3/4 border-green-200 rounded mb-4 px-4 ml-4" type="text"
-                                placeholder="Income amount">
-                        </div>
+                <h2 class="text-3xl font-semibold text-green-600 text-center mb-6">Budget Details</h2>
+
+                <!-- Income Section -->
+                <div class="mb-4">
+                    <label for="income-input" class="block text-lg font-medium text-gray-700">Income</label>
+                    <input id="income-input" type="number" placeholder="Enter your income"
+                        class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-green-200">
+                </div>
+
+                <!-- Expenses Section -->
+                <h3 class="text-2xl font-semibold text-green-600 mb-4">Expenses</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="food-cost-input" class="block text-lg font-medium text-gray-700">Food</label>
+                        <input id="food-cost-input" type="number" placeholder="Enter food expense"
+                            class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-green-200">
+                    </div>
+                    <div>
+                        <label for="rent-cost-input" class="block text-lg font-medium text-gray-700">Rent</label>
+                        <input id="rent-cost-input" type="number" placeholder="Enter rent expense"
+                            class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-green-200">
+                    </div>
+                    <div>
+                        <label for="clothes-cost-input" class="block text-lg font-medium text-gray-700">Clothes</label>
+                        <input id="clothes-cost-input" type="number" placeholder="Enter clothes expense"
+                            class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-green-200">
                     </div>
                 </div>
-                <div class="field">
-                    <h1 class="text-3xl text-center font-medium mt-4 mb-4 text-green-600">Expenses</h1>
-                    <div class="text-field">
-                        <div>
-                            <h1 class="text-1xl font-normal ml-60">Food :</h1>
-                        </div>
-                        <div class="input-field">
-                            <input id="food-cost-input"
-                                class="border-2 block w-3/4 border-green-200 rounded mb-4 px-4 ml-6" type="text"
-                                placeholder="Expenses for food">
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="text-field">
-                        <div>
-                            <h1 class="text-1xl font-normal ml-60">Rent :</h1>
-                        </div>
-                        <div class="input-field">
-                            <input id="rent-cost-input"
-                                class="border-2 block w-3/4 border-green-200 rounded mb-4 px-4 ml-7" type="text"
-                                placeholder="Expenses for rent">
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="text-field">
-                        <div>
-                            <h1 class="text-1xl font-normal ml-60">Clothes :</h1>
-                        </div>
-                        <div class="input-field">
-                            <input id="clothes-cost-input"
-                                class="border-2 block w-3/4 border-green-200 rounded mb-4 px-4 ml-3" type="text"
-                                placeholder="Expenses for clothes">
-                        </div>
-                    </div>
-                </div>
-                <div>
+
+                <!-- Calculate Button -->
+                <div class="text-center mt-6">
                     <button id="calculate-btn"
-                        class="bg-green-600 ml-80 pt-2 pb-2 pl-4 pr-4 mt-8 text-green-50 rounded">Calculate</button>
+                        class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-md transition">
+                        Calculate
+                    </button>
                 </div>
 
-                <!-- calculation section  -->
-
-                <div class="flex mt-4 mb-2 ml-48">
-                    <h1 class="text-2xl font-semibold">Total Expense : </h1>
-                    <div class="input-field">
-                        <input id="total-expense" class="border-2 block w-3/4 border-green-200 rounded mb-4 px-4 ml-3"
-                            type="text">
+                <!-- Results Section -->
+                <div class="mt-8 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-medium">Total Expense:</span>
+                        <input id="total-expense" type="text" readonly
+                            class="w-1/2 px-4 py-2 border rounded-md bg-gray-100">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-medium">Balance:</span>
+                        <input id="balance-field" type="text" readonly
+                            class="w-1/2 px-4 py-2 border rounded-md bg-gray-100">
                     </div>
                 </div>
-                <div class="flex mt-4 mb-2 ml-56">
-                    <h1 class="text-2xl font-semibold">Balance : </h1>
-                    <div class="input-field">
-                        <input id="balance-field" class="border-2 block w-3/4 border-green-200 rounded mb-4 px-2 ml-3"
-                            type="text">
-                    </div>
-                </div>
-
-                <!-- save button section -->
-
-
-                <div class="flex">
-                    <div>
-                        <p class="text-1xl font-normal ml-44">Save :</p>
-                    </div>
-                    <div>
-                        <input id="income-input" class="border-2 block w-3/4 border-green-200 rounded mb-4 px-4 ml-3"
-                            type="text" placeholder="percentage">
-                    </div>
-                    <div>
-                        <button class="bg-green-600 pt-2 pb-2 pl-4 pr-4 text-green-50 rounded">Save</button>
-                    </div>
-                </div>
-
             </div>
+        </div>
+    </main>
 
-        </div>
-        <div class="notify-section">
-            <p id="notify-fail" class="notify">Please enter a value</p>
-        </div>
-    </section>
-    <script src="js/budget-calculator.js"></script>
+    <!-- Notification Section -->
+    <div id="notify-fail" class="hidden text-center mt-4 text-red-600 font-semibold">
+        Please fill in all fields before calculating.
+    </div>
 </body>
-
+ <script src="js/budget-calculator.js"></script>
 </html>
